@@ -129,8 +129,6 @@ export const getRefreshToken = async (req, res) => {
       revoked: false,
     });
 
-    console.log("Session::", session);
-
     if (!session) {
       return res.status(400).json({
         return_message: "Invalid refresh token.",
